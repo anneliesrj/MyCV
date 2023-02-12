@@ -1,0 +1,397 @@
+$blue: #12293b;
+$peach: #eea47f;
+
+body {
+    margin: 0;
+    height: 100%;
+    padding-top: 100px;
+    font-family: 'Montserrat Alternates', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+.container {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    height: 100px;
+    transition: height 0.3s;
+  }
+  
+  header.shrink {
+    height: 40px;
+  }  
+
+#topnav {
+    background-color: $peach;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 25px;
+    padding: 20px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    border-bottom: 4px solid white;
+
+.navbar {
+    font-weight: bold;
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+}
+.options {
+    display: flex;
+    margin-right: 20px;
+}
+
+.options li {
+    margin-right: 25px;
+    list-style-type: none;
+    cursor: pointer;
+}
+a:link, a:visited{
+    text-decoration: none;
+    color: white;
+}
+}
+
+// first block with photo -- will later make a real photo
+#firstdiv {
+    height: 600px;
+    width: 100%;
+    background-color: $blue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+
+    img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    background-color: transparent;
+    }
+
+    h1 {
+    font-size: 50px;
+    margin-bottom: 10px;
+    }
+
+    h4 {
+    font-size: 20px;
+    }
+}
+
+// about
+#About {
+    height: 400px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: $blue;
+    padding: 20px;
+    margin-top: 40px;
+    margin-bottom: 100px;
+    
+    h1 {
+    font-size: 50px;
+    margin-bottom: 40px;
+    }
+
+    p {
+    font-size: 17px;
+    line-height: 1.5;
+    text-align: justify;
+    width: 70%;
+    margin: 0 auto;
+    column-count: 2;
+    column-gap: 40px;
+    column-rule-style: solid;
+    column-rule-color: $blue ;
+    }
+}
+
+// education
+#education{
+    background-color: $blue;
+    width: 100%;
+    padding: 20px;
+    padding-top: 50px;
+
+    h1{
+    margin-top: 40px;    
+    font-size: 50px;
+    margin-bottom: 40px;
+    color: white;
+    text-align: center;    
+    }
+
+
+.timeline{
+    width: 400px;
+    margin: auto;
+    color: white;
+    background-color: $blue;
+    font-size: 20px;
+  
+
+    p{
+    border-top: 2px dashed;
+    border-color: white !important;
+    margin:0; padding: 30px;
+    counter-increment: section;
+    position: relative;
+    line-height: 1.5;
+    
+}
+
+ p:nth-child(even):before {
+    content: "";
+    right: 100%; 
+    margin-right: -20px;
+    position: absolute;
+    border-radius: 50%;
+    padding: 10px;
+    height: 20px;
+    width: 20px;
+    background-color: $peach;
+    border: 2px solid white;
+    text-align:center;
+    color: white;
+    font-size: 110%;
+  }
+  
+  p:nth-child(odd):before {
+    content:"";
+    left: 100%; 
+    margin-left: -20px;
+    position: absolute;
+    border-radius: 50%;
+    padding: 10px;
+    height: 20px;
+    width: 20px;
+    background-color: $peach;
+    border: 2px solid white;
+    text-align:center;
+    color: white;
+    font-size: 110%;
+  }
+    
+  p:nth-child(even) {
+    border-left: 2px dashed;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    margin-right: 30px; 
+    padding-right: 0;
+  }
+  
+  p:nth-child(odd) {
+    border-right: 2px dashed;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    margin-left: 30px; 
+    padding-left: 0;
+  }
+  
+  p:first-child {
+    border-top: 0;
+    border-top-right-radius:0;
+    border-top-left-radius:0;
+  }
+  
+  p:last-child {
+    border-bottom-right-radius:0;
+    border-bottom-left-radius:0;
+  }
+}
+}
+
+// skills
+#skills{
+    height: 400px;
+    background-color: white;
+    color: $blue;
+    width: 100%;
+    margin-top: 80px;
+    margin-bottom: 120px;
+    padding-top: 50px;
+
+    h1{
+        font-size: 50px;
+        margin-bottom: 40px;
+        text-align: center;
+    }
+
+    h2 {
+        overflow: hidden;
+        text-align: center;
+        color: $blue;
+      }
+      
+      h2:before,
+      h2:after {
+        background-color: $blue;
+        content: "";
+        display: inline-block;
+        height: 1px;
+        position: relative;
+        vertical-align: middle;
+        width: 50%;
+      }
+      
+      h2:before {
+        right: 0.5em;
+        margin-left: -50%;
+      }
+      
+      h2:after {
+        left: 0.5em;
+        margin-right: -50%;
+      }
+
+    .software, .personal{
+        text-align: center;
+        width: 66.66%; /* 2/3 of the screen width */
+        margin: 0 auto; /* Center the container on the page */
+    }
+    
+    ul {
+        list-style: none; /* Remove bullet points */
+        display: flex; /* Display the list items in a row */
+        justify-content: center; /* Center the list items horizontally */
+        padding: 0; /* Remove padding */
+        margin: 0; /* Remove margin */
+    }
+    
+    ul li {
+        display: inline-block; /* Display each list item as an inline block */
+        margin-right: 60px;
+    }
+    
+    img {
+        width: 70px; /* Set a default width for the images */
+        height: 70px; /* Set a default height for the images */
+        margin: 10px 0; /* Add a margin between the images */
+
+
+    }
+    ul li .description {
+        font-size: 12px; /* Set a default font size for the description */
+        margin: 0; /* Remove margin */
+        padding: 0; /* Remove padding */
+     
+    }
+}
+
+//work experience
+#work {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $blue;
+    color: white;
+    padding-top: 50px;
+
+    h1 {
+      font-size: 50px;
+      margin-bottom: 40px;
+      text-align: center;
+    }
+
+    .experience {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 40px;
+      width: 66.66%;
+      border-bottom: 2px $peach solid;
+      margin-left: auto;
+      margin-right: auto;
+    
+      img {
+        border-radius: 50%;
+        width: 120px;
+        height: 120px;
+        margin-bottom: 20px;
+      }
+  
+      h3 {
+        text-align: center;
+        margin-bottom: 2px;
+      }
+  
+      h4 {
+        text-align: center;
+        margin-bottom: 2px;
+      }
+  
+      p {
+        text-align: center;
+        width: 60%;
+        font-size: 14px;
+      }
+    }
+  }
+
+//contact info
+#contact {
+    background-color: $peach;
+    width: 100%;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    border-top: 4px solid white;
+
+li img {
+    width: 70px;
+    aspect-ratio: 3/2;
+    object-fit: contain;
+    cursor: pointer;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+li {
+    margin-left: 25px;
+    cursor: pointer;
+}
+
+li a:link, li a:visited {
+    text-decoration: none;
+    color: white;
+}
+}
